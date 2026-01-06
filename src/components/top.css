@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.searchinput {
+  width: 260px;
+  padding: 8px 10px 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  background-color: #f9fafb;
+  color: #1f2933;
+}
+
+.searchinput::placeholder {
+  color: #9ca3af;
+}
+
+.searchinput:focus {
+  border-color: #ff7843;
+  outline: none;
+}
+
+.categorylist {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+.categorylist li {
+  padding: 6px 14px;
+  border-radius: 999px; /* pill shape */
+  background-color: #f3f4f6;
+  color: #374151;
+  font-size: 14px;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease,
+    box-shadow 0.15s ease; /* smooth animation */
+}
+.categorylist li:hover {
+  cursor: pointer;
+  background-color: #ff7843;
+  color: #ffffff;
+  transform: translateY(-2px); /* slight lift */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.categorylist li.active {
+  background-color: #ff7843;
+  color: #ffffff;
+}
